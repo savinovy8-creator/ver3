@@ -368,7 +368,7 @@
         .activity-card h4 { font-size: 1.25rem; margin-bottom: 12px; color: var(--cream); }
         .activity-card p { font-size: 1rem; color: var(--cream-muted); line-height: 1.55; }
 
-        /* ===== 8. ЭКСПЕРТЫ – КАРУСЕЛЬ ===== */
+        /* ===== 8. ЭКСПЕРТЫ – БЕСКОНЕЧНАЯ КАРУСЕЛЬ ===== */
         #experts { background-color: var(--bg-deep); }
         .carousel-wrapper {
             position: relative;
@@ -377,11 +377,11 @@
         }
         .carousel-track {
             display: flex;
-            transition: transform 0.4s ease;
+            transition: transform 0.5s ease;
             will-change: transform;
         }
         .carousel-slide {
-            flex: 0 0 25%; /* 4 карточки на десктопе */
+            flex: 0 0 25%;
             padding: 0 12px;
             box-sizing: border-box;
         }
@@ -415,7 +415,6 @@
         .team-name { font-family: var(--f-head); font-weight: 700; font-size: 1.05rem; color: var(--cream); margin-bottom: 4px; line-height: 1.3; }
         .team-role { font-size: 0.92rem; color: var(--gold-bright); font-style: italic; }
 
-        /* Кнопки карусели */
         .carousel-btn {
             position: absolute;
             top: 50%;
@@ -443,7 +442,6 @@
         .carousel-btn.prev { left: 4px; }
         .carousel-btn.next { right: 4px; }
 
-        /* Точки (индикаторы) */
         .carousel-dots {
             display: flex;
             justify-content: center;
@@ -464,7 +462,6 @@
             transform: scale(1.2);
         }
 
-        /* Адаптив карусели */
         @media (max-width: 992px) {
             .carousel-slide { flex: 0 0 33.333%; }
         }
@@ -478,7 +475,7 @@
             .carousel-dots { gap: 8px; }
         }
 
-        /* ===== 9. МОДАЛЬНОЕ ОКНО ДЛЯ ЭКСПЕРТОВ ===== */
+        /* ===== 9. МОДАЛКА ЭКСПЕРТА ===== */
         .modal-expert {
             position: fixed; inset: 0; background: rgba(10, 25, 20, 0.85);
             backdrop-filter: blur(6px); z-index: 2000;
@@ -847,12 +844,16 @@
             display: flex; align-items: center; justify-content: space-between;
             flex-wrap: wrap; gap: 16px;
         }
-        .footer-links { display: flex; align-items: center; gap: 24px; }
-        .footer-link, .github-link {
+        .footer-links {
+            display: flex; align-items: center; gap: 24px;
+        }
+        .footer-link {
             color: var(--cream-muted); text-decoration: none; transition: color var(--ease);
             display: inline-flex; align-items: center; gap: 6px;
         }
-        .footer-link:hover, .github-link:hover { color: var(--gold-bright); }
+        .footer-link:hover {
+            color: var(--gold-bright);
+        }
         .back-to-top {
             position: fixed; bottom: 26px; right: 26px;
             width: 44px; height: 44px; background: var(--bg-panel);
@@ -1150,7 +1151,7 @@
 
             <div class="carousel-wrapper reveal">
                 <div class="carousel-track" id="carouselTrack">
-                    <!-- Карточки заполняются из JavaScript -->
+                    <!-- заполняется из JS -->
                 </div>
                 <button class="carousel-btn prev" id="carouselPrev" aria-label="Назад">‹</button>
                 <button class="carousel-btn next" id="carouselNext" aria-label="Вперёд">›</button>
@@ -1462,7 +1463,7 @@
         </div>
     </section>
 
-    <!-- ===== ФУТЕР ===== -->
+    <!-- ===== ФУТЕР (БЕЗ УПОМИНАНИЯ GITHUB PAGES) ===== -->
     <div class="footer-gold-divider" aria-hidden="true">
         <svg viewBox="0 0 120 24" fill="none" stroke="var(--gold-bright)" stroke-width="1">
             <line x1="0" y1="12" x2="40" y2="12"/><circle cx="60" cy="12" r="8"/><circle cx="60" cy="12" r="3"/><line x1="80" y1="12" x2="120" y2="12"/>
@@ -1473,10 +1474,6 @@
             <div>© 2026 Байкальская ассоциация предприятий индустрии красоты</div>
             <div class="footer-links">
                 <a href="#" class="footer-link">Политика конфиденциальности</a>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="github-link">
-                    <svg class="svg-icon" style="width:16px;height:16px;" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                    <span>GitHub Pages</span>
-                </a>
             </div>
         </div>
     </footer>
@@ -1487,12 +1484,12 @@
 
     <!-- ===== JAVASCRIPT ===== -->
     <script>
-        // ------------------------ ДАННЫЕ ЭКСПЕРТОВ ------------------------
+        // ==================== ДАННЫЕ ЭКСПЕРТОВ ====================
         const expertsData = [
             {
                 id: 'expert1',
                 name: 'Пономарева Светлана Владимировна',
-                role: 'Председатель и создатель Байкальской ассоциации предприятий индустрии красоты',
+                role: 'Председатель и создатель БАПИК',
                 photo: 'images/team-ponomareva.jpg',
                 desc: 'Организатор и идейный вдохновитель Иркутского городского фестиваля «Формула красоты». Член попечительского и наблюдательного совета по колледжам Иркутской области. Наставник мастеров в бьюти-индустрии.',
                 achievements: [
@@ -1517,7 +1514,7 @@
             {
                 id: 'expert3',
                 name: 'Князева Людмила Сергеевна',
-                role: 'Заместитель директора Иркутского колледжа экономики, сервиса и туризма',
+                role: 'Заместитель директора ИКЭСТ, соучредитель БАПИК',
                 photo: 'images/team-knyazeva.jpg',
                 desc: 'Соучредитель БАПИК с момента создания (8 июля 2014 года). Стаж работы – 28 лет.',
                 achievements: [
@@ -1530,7 +1527,7 @@
             {
                 id: 'expert4',
                 name: 'Токаренко (Макарова) Анна Александровна',
-                role: 'Учредитель Байкальской ассоциации предприятий индустрии красоты (2014)',
+                role: 'Учредитель БАПИК (2014)',
                 photo: 'images/team-tokarenko.jpg',
                 desc: 'Ранее – индивидуальный предприниматель в сфере парикмахерских услуг и салонов красоты.',
                 achievements: [
@@ -1541,7 +1538,7 @@
             {
                 id: 'expert5',
                 name: 'Шишкин Сергей Николаевич',
-                role: 'Бывший директор ГАПОУ ИКЭСТ, соучредитель БАПИК',
+                role: 'Бывший директор ИКЭСТ, соучредитель БАПИК',
                 photo: 'images/team-shishkin.jpg',
                 desc: 'Был директором Иркутского колледжа экономики, сервиса и туризма. Соучредитель БАПИК с 08.07.2014 по 15.12.2021.',
                 achievements: [
@@ -1561,18 +1558,32 @@
             }
         ];
 
-        // -------- КАРУСЕЛЬ --------
+        // ==================== БЕСКОНЕЧНАЯ КАРУСЕЛЬ ====================
         const track = document.getElementById('carouselTrack');
         const dotsContainer = document.getElementById('carouselDots');
         const prevBtn = document.getElementById('carouselPrev');
         const nextBtn = document.getElementById('carouselNext');
 
         let currentIndex = 0;
+        let realIndex = 0; // отслеживаем реальный индекс без клонов
+        const slidesPerView = 4; // число видимых карточек (меняется в медиа)
         let slides = [];
+        let slideWidth = 0;
+        let totalSlides = expertsData.length;
+        let isTransitioning = false;
 
         function buildCarousel() {
-            // Создаём слайды
-            expertsData.forEach((expert, index) => {
+            // Очищаем трек
+            track.innerHTML = '';
+
+            // Клонируем данные для зацикливания: добавляем в начало последний слайд, в конец первый
+            const extended = [
+                expertsData[totalSlides - 1],
+                ...expertsData,
+                expertsData[0]
+            ];
+
+            extended.forEach((expert, index) => {
                 const slide = document.createElement('div');
                 slide.className = 'carousel-slide';
                 slide.innerHTML = `
@@ -1586,7 +1597,7 @@
                 `;
                 track.appendChild(slide);
 
-                // Клик по карточке открывает модалку
+                // Клик по карточке
                 slide.querySelector('.team-card').addEventListener('click', () => {
                     openExpertModal(expert.id);
                 });
@@ -1594,55 +1605,105 @@
 
             slides = Array.from(track.children);
 
-            // Создаём точки
+            // Создаём точки (для реальных, без клонов)
             dotsContainer.innerHTML = '';
-            expertsData.forEach((_, index) => {
+            for (let i = 0; i < totalSlides; i++) {
                 const dot = document.createElement('button');
-                dot.className = 'carousel-dot' + (index === 0 ? ' active' : '');
-                dot.dataset.index = index;
-                dot.addEventListener('click', () => goTo(index));
+                dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+                dot.dataset.index = i;
+                dot.addEventListener('click', () => goTo(i));
                 dotsContainer.appendChild(dot);
-            });
+            }
 
+            // Обновляем размеры и позицию
             updateCarousel();
+            // Перемещаем на реальный первый слайд (индекс 1, т.к. мы добавили клон в начало)
+            realIndex = 0;
+            currentIndex = 1; // первый реальный слайд после клона
+            jumpTo(currentIndex);
+        }
+
+        function getSlideWidth() {
+            const first = slides[0];
+            if (!first) return 0;
+            return first.getBoundingClientRect().width || 0;
         }
 
         function updateCarousel() {
-            const slideWidth = slides[0]?.getBoundingClientRect().width || 0;
-            if (slideWidth === 0) return;
+            const width = getSlideWidth();
+            if (width === 0) return;
+            slideWidth = width;
             track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
-
             // Обновляем точки
-            document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
-                dot.classList.toggle('active', i === currentIndex);
+            const dots = document.querySelectorAll('.carousel-dot');
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === realIndex);
             });
+        }
 
-            // Прячем/показываем кнопки на мобилках (сделано через медиа-запрос в CSS)
+        function jumpTo(index) {
+            track.style.transition = 'none';
+            track.style.transform = `translateX(-${index * slideWidth}px)`;
+            currentIndex = index;
+            // Принудительное обновление после перехода
+            requestAnimationFrame(() => {
+                track.style.transition = 'transform 0.5s ease';
+            });
         }
 
         function goTo(index) {
-            const total = slides.length;
-            if (index < 0) index = total - 1;
-            if (index >= total) index = 0;
-            currentIndex = index;
+            if (isTransitioning) return;
+            if (index < 0) index = totalSlides - 1;
+            if (index >= totalSlides) index = 0;
+            realIndex = index;
+            const newIndex = index + 1; // +1 из-за клона в начале
+            currentIndex = newIndex;
             updateCarousel();
+            // Если дошли до клона в конце, после анимации перепрыгнуть
+            if (newIndex === slides.length - 1) {
+                // это последний клон (первый реальный), после анимации прыгнем на реальный первый
+                setTimeout(() => {
+                    isTransitioning = true;
+                    jumpTo(1);
+                    realIndex = 0;
+                    currentIndex = 1;
+                    updateCarousel();
+                    setTimeout(() => { isTransitioning = false; }, 50);
+                }, 500);
+            } else if (newIndex === 0) {
+                // это клон в начале (последний реальный)
+                setTimeout(() => {
+                    isTransitioning = true;
+                    jumpTo(totalSlides);
+                    realIndex = totalSlides - 1;
+                    currentIndex = totalSlides;
+                    updateCarousel();
+                    setTimeout(() => { isTransitioning = false; }, 50);
+                }, 500);
+            }
         }
 
         // Обработчики кнопок
-        prevBtn.addEventListener('click', () => goTo(currentIndex - 1));
-        nextBtn.addEventListener('click', () => goTo(currentIndex + 1));
+        prevBtn.addEventListener('click', () => goTo(realIndex - 1));
+        nextBtn.addEventListener('click', () => goTo(realIndex + 1));
 
-        // Обновление при ресайзе
+        // Ресайз
         let resizeTimer;
         window.addEventListener('resize', () => {
             clearTimeout(resizeTimer);
-            resizeTimer = setTimeout(updateCarousel, 100);
+            resizeTimer = setTimeout(() => {
+                const newWidth = getSlideWidth();
+                if (newWidth > 0 && Math.abs(newWidth - slideWidth) > 2) {
+                    slideWidth = newWidth;
+                    jumpTo(currentIndex);
+                }
+            }, 200);
         });
 
-        // Инициализация карусели
+        // Инициализация
         buildCarousel();
 
-        // -------- МОДАЛКА ЭКСПЕРТА --------
+        // ==================== МОДАЛКА ЭКСПЕРТА ====================
         const modalExpert = document.getElementById('modalExpert');
         const modalExpertClose = document.getElementById('modalExpertClose');
         const modalExpertPhoto = document.getElementById('modalExpertPhoto');
@@ -1674,7 +1735,7 @@
         modalExpert.addEventListener('click', (e) => { if (e.target === modalExpert) closeExpertModal(); });
         document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeExpertModal(); });
 
-        // -------- НОВОСТИ (модалка) --------
+        // ==================== НОВОСТИ ====================
         const newsData = {
             news1: {
                 date: '24 августа 2026',
@@ -1719,7 +1780,7 @@
         modalNews.addEventListener('click', (e) => { if (e.target === modalNews) { modalNews.classList.remove('active'); document.body.style.overflow = ''; } });
         document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { modalNews.classList.remove('active'); document.body.style.overflow = ''; } });
 
-        // -------- ОБЩИЕ ФУНКЦИИ --------
+        // ==================== ОБЩИЕ ФУНКЦИИ ====================
         function copyText(text) {
             if (navigator.clipboard) {
                 navigator.clipboard.writeText(text).then(() => alert('Скопировано: ' + text));
