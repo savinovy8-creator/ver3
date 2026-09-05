@@ -5,42 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>БАПИК — Байкальская ассоциация предприятий индустрии красоты</title>
     <meta name="description" content="БАПИК — объединяем салоны, мастеров и экспертов Иркутска и Байкальского региона. Защита, знания, контакты, репутация.">
-    <meta name="keywords" content="БАПИК, индустрия красоты Иркутск, ассоциация, фестиваль Формула красоты, поддержка бьюти бизнеса">
-    <meta name="author" content="БАПИК">
-    <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#12312A">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="БАПИК — Байкальская ассоциация предприятий индустрии красоты">
-    <meta property="og:description" content="Сильная бьюти-индустрия начинается с сильного сообщества. Объединяем профессионалов с 2014 года.">
-    <meta property="og:image" content="images/hero-bg.jpg">
-    <meta property="og:locale" content="ru_RU">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "NGO",
-      "name": "Байкальская ассоциация предприятий индустрии красоты",
-      "alternateName": "БАПИК",
-      "foundingDate": "2014-03-29",
-      "founder": { "@type": "Person", "name": "Пономарева Светлана Владимировна" },
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "ул. Красного Восстания, д. 20",
-        "addressLocality": "г. Иркутск",
-        "addressRegion": "Иркутская область",
-        "addressCountry": "RU"
-      },
-      "email": "info@bapik.ru",
-      "telephone": "+73952000000",
-      "taxID": "3812156198"
-    }
-    </script>
     <style>
-        /* ============================================================
-           1. ПАЛИТРА И ПЕРЕМЕННЫЕ
-           ============================================================ */
+        /* ===== 1. ПЕРЕМЕННЫЕ ===== */
         :root {
             --bg-deep: #0E2A23;
             --bg-panel: #12312A;
@@ -146,9 +116,7 @@
         .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
 
-        /* ============================================================
-           2. ХЕДЕР
-           ============================================================ */
+        /* ===== 2. ХЕДЕР ===== */
         .header {
             position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
             background: rgba(14, 42, 35, 0.92); backdrop-filter: blur(10px);
@@ -184,9 +152,7 @@
             cursor: pointer; padding: 6px;
         }
 
-        /* ============================================================
-           3. HERO (НОВЫЙ, ЧЕЛОВЕЧНЫЙ)
-           ============================================================ */
+        /* ===== 3. HERO ===== */
         .hero {
             position: relative; min-height: 100vh; display: flex; align-items: center;
             padding: 140px 0 80px; background: var(--bg-deep); overflow: hidden;
@@ -230,7 +196,7 @@
             color: var(--cream-muted); max-width: 720px; margin-left: auto; margin-right: auto;
             font-style: italic;
         }
-        .hero-actions-primary { margin-bottom: 40px; }
+        .hero-actions-primary { margin-bottom: 18px; }
         .btn-join-hero {
             padding: 20px 56px; font-size: 1.15rem; font-weight: 700;
             border: 2px solid var(--gold-bright);
@@ -251,11 +217,14 @@
             100% { box-shadow: 0 0 0 0 rgba(217,166,46,0), 0 4px 24px rgba(217,166,46,0.3); }
         }
         .btn-join-hero { animation: pulse-gold 2.8s infinite; }
-
-        /* Три факта на первом экране */
+        .hero-actions {
+            display: flex; justify-content: center; flex-wrap: wrap; gap: 16px;
+            margin-bottom: 40px;
+        }
+        .hero-actions .btn { min-width: 160px; }
         .hero-facts {
             display: flex; justify-content: center; gap: 48px;
-            margin-top: 20px; flex-wrap: wrap;
+            margin-top: 10px; flex-wrap: wrap;
         }
         .hero-fact {
             text-align: center;
@@ -281,9 +250,7 @@
             .hero-fact { border-right: none; padding-right: 0; }
         }
 
-        /* ============================================================
-           4. МИССИЯ
-           ============================================================ */
+        /* ===== 4. МИССИЯ ===== */
         #mission { background-color: var(--bg-panel); }
         .mission-quote {
             max-width: 800px; margin: 0 auto; text-align: center;
@@ -292,9 +259,7 @@
         }
         .mission-quote span { color: var(--gold-bright); }
 
-        /* ============================================================
-           5. О НАС (переписан)
-           ============================================================ */
+        /* ===== 5. О НАС ===== */
         .about-grid {
             display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
             align-items: center; position: relative; z-index: 1;
@@ -344,9 +309,7 @@
         }
         .goals-list svg { color: var(--gold); margin-top: 5px; }
 
-        /* ============================================================
-           6. ЧТО ВЫ ПОЛУЧАЕТЕ (НОВЫЙ БЛОК)
-           ============================================================ */
+        /* ===== 6. ЧТО ВЫ ПОЛУЧАЕТЕ ===== */
         .benefits-grid {
             display: grid; grid-template-columns: repeat(4, 1fr);
             gap: 1px; background: var(--line); border: 1px solid var(--line);
@@ -380,9 +343,7 @@
             .benefits-grid { grid-template-columns: 1fr; }
         }
 
-        /* ============================================================
-           7. ДЕЯТЕЛЬНОСТЬ
-           ============================================================ */
+        /* ===== 7. ДЕЯТЕЛЬНОСТЬ ===== */
         #activities { background-color: var(--bg-panel); }
         .activities-grid {
             display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
@@ -407,15 +368,36 @@
         .activity-card h4 { font-size: 1.25rem; margin-bottom: 12px; color: var(--cream); }
         .activity-card p { font-size: 1rem; color: var(--cream-muted); line-height: 1.55; }
 
-        /* ============================================================
-           8. ЭКСПЕРТЫ
-           ============================================================ */
+        /* ===== 8. ЭКСПЕРТЫ – КАРУСЕЛЬ ===== */
         #experts { background-color: var(--bg-deep); }
-        .team-grid {
-            display: grid; grid-template-columns: repeat(4, 1fr);
-            gap: 34px; position: relative; z-index: 1;
+        .carousel-wrapper {
+            position: relative;
+            overflow: hidden;
+            margin: 0 -12px;
         }
-        .team-card { text-align: center; }
+        .carousel-track {
+            display: flex;
+            transition: transform 0.4s ease;
+            will-change: transform;
+        }
+        .carousel-slide {
+            flex: 0 0 25%; /* 4 карточки на десктопе */
+            padding: 0 12px;
+            box-sizing: border-box;
+        }
+        .team-card {
+            text-align: center;
+            background: var(--bg-panel);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 30px 20px 24px;
+            transition: background var(--ease), transform var(--ease);
+            cursor: pointer;
+        }
+        .team-card:hover {
+            background: var(--bg-panel-light);
+            transform: translateY(-4px);
+        }
         .team-photo-frame {
             position: relative; width: 150px; height: 150px; margin: 0 auto 20px;
             border-radius: 50%; padding: 6px; border: 1.5px solid var(--gold);
@@ -433,9 +415,121 @@
         .team-name { font-family: var(--f-head); font-weight: 700; font-size: 1.05rem; color: var(--cream); margin-bottom: 4px; line-height: 1.3; }
         .team-role { font-size: 0.92rem; color: var(--gold-bright); font-style: italic; }
 
-        /* ============================================================
-           9. НОВОСТИ
-           ============================================================ */
+        /* Кнопки карусели */
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            background: rgba(14,42,35,0.7);
+            backdrop-filter: blur(4px);
+            border: 1px solid var(--gold-dim);
+            color: var(--gold-bright);
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--ease);
+            user-select: none;
+        }
+        .carousel-btn:hover {
+            background: var(--gold);
+            color: var(--bg-deep);
+        }
+        .carousel-btn.prev { left: 4px; }
+        .carousel-btn.next { right: 4px; }
+
+        /* Точки (индикаторы) */
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 32px;
+        }
+        .carousel-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--cream-faint);
+            border: none;
+            cursor: pointer;
+            transition: background var(--ease), transform var(--ease);
+        }
+        .carousel-dot.active {
+            background: var(--gold-bright);
+            transform: scale(1.2);
+        }
+
+        /* Адаптив карусели */
+        @media (max-width: 992px) {
+            .carousel-slide { flex: 0 0 33.333%; }
+        }
+        @media (max-width: 768px) {
+            .carousel-slide { flex: 0 0 50%; }
+            .carousel-btn { width: 36px; height: 36px; font-size: 1.4rem; }
+        }
+        @media (max-width: 576px) {
+            .carousel-slide { flex: 0 0 100%; }
+            .carousel-btn { display: none; }
+            .carousel-dots { gap: 8px; }
+        }
+
+        /* ===== 9. МОДАЛЬНОЕ ОКНО ДЛЯ ЭКСПЕРТОВ ===== */
+        .modal-expert {
+            position: fixed; inset: 0; background: rgba(10, 25, 20, 0.85);
+            backdrop-filter: blur(6px); z-index: 2000;
+            display: flex; align-items: center; justify-content: center;
+            padding: 16px; opacity: 0; visibility: hidden;
+            transition: opacity 0.25s ease, visibility 0.25s ease;
+        }
+        .modal-expert.active { opacity: 1; visibility: visible; }
+        .modal-expert-content {
+            background: var(--bg-panel); border: 1px solid var(--gold-dim);
+            max-width: 660px; width: 100%; max-height: 85vh;
+            overflow-y: auto; padding: 40px; position: relative;
+            border-radius: 12px;
+        }
+        .modal-expert-close {
+            position: absolute; top: 20px; right: 20px;
+            background: transparent; border: 1px solid var(--cream-faint);
+            width: 34px; height: 34px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            cursor: pointer; color: var(--cream); transition: all var(--ease);
+            font-size: 1.2rem;
+        }
+        .modal-expert-close:hover { border-color: var(--gold); color: var(--gold); }
+        .modal-expert-photo {
+            width: 120px; height: 120px; border-radius: 50%; object-fit: cover;
+            border: 2px solid var(--gold); margin-bottom: 16px;
+        }
+        .modal-expert-name {
+            font-family: var(--f-head); font-size: 1.8rem; color: var(--cream);
+            margin-bottom: 6px;
+        }
+        .modal-expert-role {
+            font-size: 1.1rem; color: var(--gold-bright); font-style: italic;
+            margin-bottom: 20px;
+        }
+        .modal-expert-desc {
+            font-size: 1.02rem; color: var(--cream-muted); line-height: 1.7;
+            margin-bottom: 16px;
+        }
+        .modal-expert-achievements {
+            list-style: none; padding: 0;
+        }
+        .modal-expert-achievements li {
+            position: relative; padding-left: 24px; margin-bottom: 8px;
+            font-size: 1rem; color: var(--cream-muted);
+        }
+        .modal-expert-achievements li::before {
+            content: '✦'; position: absolute; left: 0; color: var(--gold);
+        }
+
+        /* ===== 10. НОВОСТИ ===== */
         .news-grid {
             display: grid; grid-template-columns: repeat(3, 1fr);
             gap: 1px; background: var(--line); border: 1px solid var(--line);
@@ -476,37 +570,37 @@
             transition: gap var(--ease), color var(--ease);
         }
         .news-btn:hover { color: var(--gold-bright); gap: 12px; }
-        .modal {
+        .modal-news {
             position: fixed; inset: 0; background: rgba(10, 25, 20, 0.85);
             backdrop-filter: blur(6px); z-index: 2000;
             display: flex; align-items: center; justify-content: center;
             padding: 16px; opacity: 0; visibility: hidden;
             transition: opacity 0.25s ease, visibility 0.25s ease;
         }
-        .modal.active { opacity: 1; visibility: visible; }
-        .modal-content {
+        .modal-news.active { opacity: 1; visibility: visible; }
+        .modal-news-content {
             background: var(--bg-panel); border: 1px solid var(--gold-dim);
             max-width: 660px; width: 100%; max-height: 85vh;
             overflow-y: auto; padding: 40px; position: relative;
+            border-radius: 12px;
         }
-        .modal-close {
+        .modal-news-close {
             position: absolute; top: 20px; right: 20px;
             background: transparent; border: 1px solid var(--cream-faint);
             width: 34px; height: 34px; border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
             cursor: pointer; color: var(--cream); transition: all var(--ease);
+            font-size: 1.2rem;
         }
-        .modal-close:hover { border-color: var(--gold); color: var(--gold); }
-        .modal-date {
+        .modal-news-close:hover { border-color: var(--gold); color: var(--gold); }
+        .modal-news-date {
             font-family: var(--f-head); font-size: 0.85rem; letter-spacing: 1.5px;
             text-transform: uppercase; color: var(--gold); margin-bottom: 10px;
         }
-        .modal-title { font-size: 1.7rem; color: var(--cream); margin-bottom: 20px; line-height: 1.3; }
-        .modal-text { font-size: 1.1rem; line-height: 1.7; color: var(--cream-muted); }
+        .modal-news-title { font-size: 1.7rem; color: var(--cream); margin-bottom: 20px; line-height: 1.3; }
+        .modal-news-text { font-size: 1.1rem; line-height: 1.7; color: var(--cream-muted); }
 
-        /* ============================================================
-           10. ЧЛЕНСТВО (оставляем детали)
-           ============================================================ */
+        /* ===== 11. ЧЛЕНСТВО ===== */
         #membership { background-color: var(--bg-panel); }
         .membership-grid {
             display: grid; grid-template-columns: repeat(3, 1fr);
@@ -565,9 +659,7 @@
         }
         .dues-value { font-family: var(--f-head); font-size: 1.5rem; color: var(--gold-bright); }
 
-        /* ============================================================
-           11. УПРАВЛЕНИЕ
-           ============================================================ */
+        /* ===== 12. УПРАВЛЕНИЕ ===== */
         .management-grid {
             display: grid; grid-template-columns: 1.1fr 0.9fr;
             gap: 40px; align-items: center; position: relative; z-index: 1;
@@ -599,9 +691,7 @@
             filter: sepia(20%) saturate(70%); display: block;
         }
 
-        /* ============================================================
-           12. ДОКУМЕНТЫ
-           ============================================================ */
+        /* ===== 13. ДОКУМЕНТЫ ===== */
         #docs { background-color: var(--bg-panel); }
         .docs-section-grid {
             display: grid; grid-template-columns: 1.2fr 0.8fr;
@@ -641,9 +731,7 @@
         .transparency-box h4 { font-size: 1.05rem; color: var(--gold-bright); margin-bottom: 8px; }
         .transparency-box p { font-size: 0.98rem; color: var(--cream-muted); line-height: 1.55; }
 
-        /* ============================================================
-           13. ВЗНОСЫ (ПЛАТЁЖ)
-           ============================================================ */
+        /* ===== 14. ВЗНОСЫ ===== */
         .payment-banner {
             border: 1px solid var(--gold-dim); padding: 50px;
             display: grid; grid-template-columns: 1fr 1fr; gap: 40px;
@@ -667,9 +755,7 @@
         }
         .copy-btn:hover { background: var(--gold); color: var(--bg-deep); }
 
-        /* ============================================================
-           14. FAQ
-           ============================================================ */
+        /* ===== 15. FAQ ===== */
         #faq { background-color: var(--bg-panel); }
         .faq-accordion {
             max-width: 780px; margin: 0 auto;
@@ -696,9 +782,7 @@
         }
         .faq-item.active .faq-answer { max-height: 220px; padding: 0 26px 22px 26px; }
 
-        /* ============================================================
-           15. КОНТАКТЫ
-           ============================================================ */
+        /* ===== 16. КОНТАКТЫ ===== */
         .contacts-grid {
             display: grid; grid-template-columns: 1fr 1.2fr;
             gap: 40px; position: relative; z-index: 1;
@@ -744,9 +828,7 @@
             width: 100%; height: 100%; min-height: 320px; border: none;
         }
 
-        /* ============================================================
-           16. ФУТЕР
-           ============================================================ */
+        /* ===== 17. ФУТЕР ===== */
         .footer {
             background: var(--bg-deep); color: var(--cream-muted);
             padding: 40px 0; font-size: 0.9rem;
@@ -782,9 +864,7 @@
         .back-to-top.active { opacity: 1; visibility: visible; }
         .back-to-top:hover { background: var(--gold); color: var(--bg-deep); }
 
-        /* ============================================================
-           17. АДАПТИВНОСТЬ
-           ============================================================ */
+        /* ===== 18. АДАПТИВНОСТЬ ===== */
         @media (max-width: 992px) {
             .nav-menu {
                 position: fixed; top: 84px; left: -100%;
@@ -802,7 +882,6 @@
             .hero h1 { font-size: 2.3rem; }
             .hero .hero-sub { font-size: 1.4rem; }
             .arch-pattern-bg { opacity: 0.5; }
-            .team-grid { grid-template-columns: repeat(2, 1fr); }
         }
         @media (max-width: 768px) {
             .section-title::before, .section-title::after { height: 16px; opacity: 0.3; }
@@ -822,23 +901,21 @@
             .section-title { font-size: 1.8rem; padding: 0; }
             .section-title::before, .section-title::after { display: none; }
             .payment-banner { padding: 26px 18px; }
-            .modal-content { padding: 24px; }
+            .modal-expert-content, .modal-news-content { padding: 24px; }
             .hero-frame { inset: 12px; }
-            .team-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
             .btn-join-hero { width: 100%; padding: 18px 20px; }
             .divider-label { font-size: 0.7rem; letter-spacing: 1.5px; }
             .footer-gold-divider svg { width: 90px; }
             .hero-facts { flex-direction: column; align-items: center; gap: 12px; }
             .hero-fact { border-right: none; padding-right: 0; }
+            .hero-actions .btn { width: 100%; }
         }
     </style>
 </head>
 <body>
     <div id="preloader"><div class="spinner"></div></div>
 
-    <!-- ============================================================
-        ХЕДЕР
-    ============================================================ -->
+    <!-- ===== ХЕДЕР ===== -->
     <header class="header" id="header">
         <div class="container header-container">
             <a href="#" class="logo">
@@ -870,9 +947,7 @@
         </div>
     </header>
 
-    <!-- ============================================================
-        HERO – НОВЫЙ, ЧЕЛОВЕЧНЫЙ
-    ============================================================ -->
+    <!-- ===== HERO ===== -->
     <section class="hero" id="hero">
         <div class="arch-pattern-bg" aria-hidden="true"></div>
         <div class="hero-bg-photo active" style="background-image: url('images/hero-bg.jpg');"></div>
@@ -908,18 +983,22 @@
                     <a href="#membership" class="btn btn-join-hero">Стать участником</a>
                 </div>
 
-                <!-- Три факта вместо статистики -->
+                <div class="hero-actions">
+                    <a href="#about" class="btn btn-filled">Узнать больше</a>
+                    <a href="#news" class="btn btn-outline-cream">Формула красоты</a>
+                </div>
+
                 <div class="hero-facts">
                     <div class="hero-fact">
-                        <div class="hero-fact-number">10+</div>
+                        <div class="hero-fact-number"><span class="counter" data-target="10">0</span>+</div>
                         <div class="hero-fact-label">лет в индустрии</div>
                     </div>
                     <div class="hero-fact">
-                        <div class="hero-fact-number">60+</div>
+                        <div class="hero-fact-number"><span class="counter" data-target="60">0</span>+</div>
                         <div class="hero-fact-label">экспертов в сообществе</div>
                     </div>
                     <div class="hero-fact">
-                        <div class="hero-fact-number">«Формула красоты»</div>
+                        <div class="hero-fact-number" style="font-size:1.8rem;">«Формула красоты»</div>
                         <div class="hero-fact-label">собственный фестиваль</div>
                     </div>
                 </div>
@@ -927,20 +1006,14 @@
         </div>
     </section>
 
-    <!-- ============================================================
-        МИССИЯ
-    ============================================================ -->
+    <!-- ===== МИССИЯ ===== -->
     <section id="mission">
         <div class="arch-pattern-bg" style="opacity:0.4;" aria-hidden="true"></div>
         <div class="container">
             <div class="divider-line reveal">
-                <span class="ornament-mark">
-                    <svg viewBox="0 0 34 34" fill="none" stroke="var(--gold)" stroke-width="1"><circle cx="17" cy="17" r="10"/><circle cx="17" cy="17" r="3"/></svg>
-                </span>
+                <span class="ornament-mark"><svg viewBox="0 0 34 34" fill="none" stroke="var(--gold)" stroke-width="1"><circle cx="17" cy="17" r="10"/><circle cx="17" cy="17" r="3"/></svg></span>
                 <span class="divider-label">Наша миссия</span>
-                <span class="ornament-mark">
-                    <svg viewBox="0 0 34 34" fill="none" stroke="var(--gold)" stroke-width="1"><circle cx="17" cy="17" r="10"/><circle cx="17" cy="17" r="3"/></svg>
-                </span>
+                <span class="ornament-mark"><svg viewBox="0 0 34 34" fill="none" stroke="var(--gold)" stroke-width="1"><circle cx="17" cy="17" r="10"/><circle cx="17" cy="17" r="3"/></svg></span>
             </div>
             <div class="mission-quote reveal">
                 «Создание сильного экспертного сообщества, защита прав предпринимателей и внедрение <span>высоких стандартов качества</span> в бьюти-сфере Прибайкалья.»
@@ -948,9 +1021,7 @@
         </div>
     </section>
 
-    <!-- ============================================================
-        О НАС – переписан
-    ============================================================ -->
+    <!-- ===== О НАС ===== -->
     <section id="about">
         <div class="container">
             <div class="about-grid">
@@ -961,7 +1032,6 @@
                         <div class="leader-role">Председатель ассоциации</div>
                     </div>
                 </div>
-
                 <div class="about-content reveal">
                     <span class="section-tag">Об организации</span>
                     <h3>Вы развиваете бизнес в бьюти-индустрии?</h3>
@@ -982,52 +1052,37 @@
         </div>
     </section>
 
-    <!-- ============================================================
-        НОВЫЙ БЛОК: ЧТО ВЫ ПОЛУЧАЕТЕ (ПРЕИМУЩЕСТВА ЧЛЕНСТВА)
-    ============================================================ -->
+    <!-- ===== ЧТО ВЫ ПОЛУЧАЕТЕ ===== -->
     <section id="benefits" class="section-alt">
         <div class="arch-pattern-bg" style="opacity:0.3;" aria-hidden="true"></div>
         <div class="container">
             <div class="divider-line reveal">
-                <span class="ornament-mark">
-                    <svg viewBox="0 0 34 34" fill="none" stroke="var(--gold-bright)" stroke-width="1.4"><circle cx="17" cy="17" r="12"/><circle cx="17" cy="17" r="6"/></svg>
-                </span>
+                <span class="ornament-mark"><svg viewBox="0 0 34 34" fill="none" stroke="var(--gold-bright)" stroke-width="1.4"><circle cx="17" cy="17" r="12"/><circle cx="17" cy="17" r="6"/></svg></span>
                 <span class="divider-label">Что вы получаете</span>
-                <span class="ornament-mark">
-                    <svg viewBox="0 0 34 34" fill="none" stroke="var(--gold-bright)" stroke-width="1.4"><circle cx="17" cy="17" r="12"/><circle cx="17" cy="17" r="6"/></svg>
-                </span>
+                <span class="ornament-mark"><svg viewBox="0 0 34 34" fill="none" stroke="var(--gold-bright)" stroke-width="1.4"><circle cx="17" cy="17" r="12"/><circle cx="17" cy="17" r="6"/></svg></span>
             </div>
             <div class="section-header reveal">
                 <span class="section-tag">Становясь частью БАПИК</span>
                 <h2 class="section-title">Вы получаете</h2>
             </div>
-
             <div class="benefits-grid">
                 <div class="benefit-card reveal">
-                    <div class="benefit-icon">
-                        <svg class="svg-icon" style="width:28px;height:28px;" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
-                    </div>
+                    <div class="benefit-icon"><svg class="svg-icon" style="width:28px;height:28px;" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg></div>
                     <h4>Защита</h4>
                     <p>Когда бизнес сталкивается с юридическими и профессиональными вопросами – мы рядом. Представляем интересы в госорганах и судах.</p>
                 </div>
                 <div class="benefit-card reveal">
-                    <div class="benefit-icon">
-                        <svg class="svg-icon" style="width:28px;height:28px;" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
-                    </div>
+                    <div class="benefit-icon"><svg class="svg-icon" style="width:28px;height:28px;" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg></div>
                     <h4>Знания</h4>
                     <p>Обучение, мастер-классы, программы повышения квалификации от ведущих экспертов. Вы всегда в курсе лучших практик.</p>
                 </div>
                 <div class="benefit-card reveal">
-                    <div class="benefit-icon">
-                        <svg class="svg-icon" style="width:28px;height:28px;" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
-                    </div>
+                    <div class="benefit-icon"><svg class="svg-icon" style="width:28px;height:28px;" viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg></div>
                     <h4>Контакты</h4>
                     <p>Партнёры, коллаборации, новые знакомства. Нетворкинг, который превращается в реальные совместные проекты.</p>
                 </div>
                 <div class="benefit-card reveal">
-                    <div class="benefit-icon">
-                        <svg class="svg-icon" style="width:28px;height:28px;" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                    </div>
+                    <div class="benefit-icon"><svg class="svg-icon" style="width:28px;height:28px;" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg></div>
                     <h4>Репутация</h4>
                     <p>Вы становитесь частью профессионального сообщества региона. Это доверие клиентов и признание коллег.</p>
                 </div>
@@ -1035,26 +1090,19 @@
         </div>
     </section>
 
-    <!-- ============================================================
-        ДЕЯТЕЛЬНОСТЬ
-    ============================================================ -->
+    <!-- ===== ДЕЯТЕЛЬНОСТЬ ===== -->
     <section id="activities">
         <div class="arch-pattern-bg" style="opacity:0.35;" aria-hidden="true"></div>
         <div class="container">
             <div class="divider-line reveal">
-                <span class="ornament-mark">
-                    <svg viewBox="0 0 34 34" fill="none" stroke="var(--gold-bright)" stroke-width="1.4"><circle cx="17" cy="17" r="12"/><circle cx="17" cy="17" r="6"/></svg>
-                </span>
+                <span class="ornament-mark"><svg viewBox="0 0 34 34" fill="none" stroke="var(--gold-bright)" stroke-width="1.4"><circle cx="17" cy="17" r="12"/><circle cx="17" cy="17" r="6"/></svg></span>
                 <span class="divider-label">Деятельность</span>
-                <span class="ornament-mark">
-                    <svg viewBox="0 0 34 34" fill="none" stroke="var(--gold-bright)" stroke-width="1.4"><circle cx="17" cy="17" r="12"/><circle cx="17" cy="17" r="6"/></svg>
-                </span>
+                <span class="ornament-mark"><svg viewBox="0 0 34 34" fill="none" stroke="var(--gold-bright)" stroke-width="1.4"><circle cx="17" cy="17" r="12"/><circle cx="17" cy="17" r="6"/></svg></span>
             </div>
             <div class="section-header reveal">
                 <span class="section-tag">Направления работы</span>
                 <h2 class="section-title">Чем занимается ассоциация</h2>
             </div>
-
             <div class="activities-grid">
                 <div class="activity-card reveal">
                     <div class="activity-icon"><svg class="svg-icon" style="width:24px;height:24px;" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg></div>
@@ -1085,20 +1133,14 @@
         </div>
     </section>
 
-    <!-- ============================================================
-        ЭКСПЕРТЫ
-    ============================================================ -->
+    <!-- ===== ЭКСПЕРТЫ (КАРУСЕЛЬ) ===== -->
     <section id="experts">
         <div class="arch-pattern-bg" style="opacity:0.3;" aria-hidden="true"></div>
         <div class="container">
             <div class="divider-line reveal">
-                <span class="ornament-mark">
-                    <svg viewBox="0 0 34 34" fill="none" stroke="var(--gold-bright)" stroke-width="1.4"><circle cx="17" cy="17" r="12"/><circle cx="17" cy="17" r="6"/></svg>
-                </span>
+                <span class="ornament-mark"><svg viewBox="0 0 34 34" fill="none" stroke="var(--gold-bright)" stroke-width="1.4"><circle cx="17" cy="17" r="12"/><circle cx="17" cy="17" r="6"/></svg></span>
                 <span class="divider-label">Лица ассоциации</span>
-                <span class="ornament-mark">
-                    <svg viewBox="0 0 34 34" fill="none" stroke="var(--gold-bright)" stroke-width="1.4"><circle cx="17" cy="17" r="12"/><circle cx="17" cy="17" r="6"/></svg>
-                </span>
+                <span class="ornament-mark"><svg viewBox="0 0 34 34" fill="none" stroke="var(--gold-bright)" stroke-width="1.4"><circle cx="17" cy="17" r="12"/><circle cx="17" cy="17" r="6"/></svg></span>
             </div>
             <div class="section-header reveal">
                 <span class="section-tag">Руководство и эксперты</span>
@@ -1106,132 +1148,107 @@
                 <p class="section-subtitle">Правление и ключевые эксперты БАПИК, отвечающие за развитие ассоциации и фестиваля «Формула красоты».</p>
             </div>
 
-            <div class="team-grid">
-                <div class="team-card reveal">
-                    <div class="team-photo-frame">
-                        <img src="images/team-1-ponomareva.jpg" alt="Пономарева Светлана Владимировна" class="team-photo" loading="lazy" decoding="async" width="280" height="280" onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&q=80'">
-                    </div>
-                    <div class="team-name">Пономарева Светлана Владимировна</div>
-                    <div class="team-role">Председатель ассоциации</div>
+            <div class="carousel-wrapper reveal">
+                <div class="carousel-track" id="carouselTrack">
+                    <!-- Карточки заполняются из JavaScript -->
                 </div>
-                <div class="team-card reveal">
-                    <div class="team-photo-frame">
-                        <img src="images/team-2-expert.jpg" alt="Член правления БАПИК" class="team-photo" loading="lazy" decoding="async" width="280" height="280" onerror="this.src='https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=500&q=80'">
-                    </div>
-                    <div class="team-name">Член правления</div>
-                    <div class="team-role">Куратор направления «Обучение»</div>
-                </div>
-                <div class="team-card reveal">
-                    <div class="team-photo-frame">
-                        <img src="images/team-3-expert.jpg" alt="Член правления БАПИК" class="team-photo" loading="lazy" decoding="async" width="280" height="280" onerror="this.src='https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=500&q=80'">
-                    </div>
-                    <div class="team-name">Член правления</div>
-                    <div class="team-role">Куратор фестиваля «Формула красоты»</div>
-                </div>
-                <div class="team-card reveal">
-                    <div class="team-photo-frame">
-                        <img src="images/team-4-expert.jpg" alt="Член ревизионной комиссии БАПИК" class="team-photo" loading="lazy" decoding="async" width="280" height="280" onerror="this.src='https://images.unsplash.com/photo-1552058544-f2b08422138a?auto=format&fit=crop&w=500&q=80'">
-                    </div>
-                    <div class="team-name">Член ревизионной комиссии</div>
-                    <div class="team-role">Контроль целевого расходования средств</div>
-                </div>
+                <button class="carousel-btn prev" id="carouselPrev" aria-label="Назад">‹</button>
+                <button class="carousel-btn next" id="carouselNext" aria-label="Вперёд">›</button>
             </div>
+            <div class="carousel-dots" id="carouselDots"></div>
         </div>
     </section>
 
-    <!-- ============================================================
-        НОВОСТИ
-    ============================================================ -->
+    <!-- ===== МОДАЛЬНОЕ ОКНО ДЛЯ ЭКСПЕРТА ===== -->
+    <div class="modal-expert" id="modalExpert">
+        <div class="modal-expert-content">
+            <button class="modal-expert-close" id="modalExpertClose">✕</button>
+            <img class="modal-expert-photo" id="modalExpertPhoto" src="" alt="Фото эксперта">
+            <div class="modal-expert-name" id="modalExpertName"></div>
+            <div class="modal-expert-role" id="modalExpertRole"></div>
+            <div class="modal-expert-desc" id="modalExpertDesc"></div>
+            <ul class="modal-expert-achievements" id="modalExpertAchievements"></ul>
+        </div>
+    </div>
+
+    <!-- ===== НОВОСТИ ===== -->
     <section id="news">
         <div class="container">
             <div class="divider-line reveal">
-                <span class="ornament-mark">
-                    <svg viewBox="0 0 34 34" fill="none" stroke="var(--gold-bright)" stroke-width="1.4"><circle cx="17" cy="17" r="12"/><circle cx="17" cy="17" r="6"/></svg>
-                </span>
+                <span class="ornament-mark"><svg viewBox="0 0 34 34" fill="none" stroke="var(--gold-bright)" stroke-width="1.4"><circle cx="17" cy="17" r="12"/><circle cx="17" cy="17" r="6"/></svg></span>
                 <span class="divider-label">Новости и фестиваль</span>
-                <span class="ornament-mark">
-                    <svg viewBox="0 0 34 34" fill="none" stroke="var(--gold-bright)" stroke-width="1.4"><circle cx="17" cy="17" r="12"/><circle cx="17" cy="17" r="6"/></svg>
-                </span>
+                <span class="ornament-mark"><svg viewBox="0 0 34 34" fill="none" stroke="var(--gold-bright)" stroke-width="1.4"><circle cx="17" cy="17" r="12"/><circle cx="17" cy="17" r="6"/></svg></span>
             </div>
             <div class="section-header reveal">
                 <span class="section-tag">Жизнь ассоциации</span>
                 <h2 class="section-title">Новости и события</h2>
                 <p class="section-subtitle">Подготовка к фестивалю «Формула красоты»</p>
             </div>
-
             <div class="news-grid">
                 <article class="news-card reveal">
                     <div class="news-img-container">
-                        <img src="images/news1.jpg" alt="Нетворкинг участников фестиваля" class="news-img" loading="lazy" decoding="async" width="380" height="200" onerror="this.src='https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=600&q=80'">
+                        <img src="images/news1.jpg" alt="Нетворкинг" class="news-img" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=600&q=80'">
                         <span class="news-badge">Фестиваль</span>
                     </div>
                     <div class="news-body">
                         <div class="news-date">24 августа 2026</div>
                         <h3 class="news-title">В Иркутске состоялся первый нетворкинг участников фестиваля</h3>
                         <p class="news-excerpt">24 августа состоялся нетворкинг экспертов и участников фестиваля «Формула красоты»...</p>
-                        <button class="news-btn" onclick="openNewsModal('news1')">Читать далее →</button>
+                        <button class="news-btn" data-news-id="news1">Читать далее →</button>
                     </div>
                 </article>
-
                 <article class="news-card reveal">
                     <div class="news-img-container">
-                        <img src="images/news2.jpg" alt="60 экспертов фестиваля" class="news-img" loading="lazy" decoding="async" width="380" height="200" onerror="this.src='https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80'">
+                        <img src="images/news2.jpg" alt="60 экспертов" class="news-img" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80'">
                         <span class="news-badge">Сообщество</span>
                     </div>
                     <div class="news-body">
                         <div class="news-date">20 августа 2026</div>
                         <h3 class="news-title">К фестивалю уже присоединились более 60 экспертов</h3>
                         <p class="news-excerpt">Подготовка к «Формуле красоты» набирает обороты. Сегодня вокруг фестиваля...</p>
-                        <button class="news-btn" onclick="openNewsModal('news2')">Читать далее →</button>
+                        <button class="news-btn" data-news-id="news2">Читать далее →</button>
                     </div>
                 </article>
-
                 <article class="news-card reveal">
                     <div class="news-img-container">
-                        <img src="images/news3.jpg" alt="Формула красоты объединяет экспертов" class="news-img" loading="lazy" decoding="async" width="380" height="200" onerror="this.src='https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=600&q=80'">
+                        <img src="images/news3.jpg" alt="Формула красоты объединяет" class="news-img" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=600&q=80'">
                         <span class="news-badge">Развитие</span>
                     </div>
                     <div class="news-body">
                         <div class="news-date">15 августа 2026</div>
                         <h3 class="news-title">«Формула красоты» объединяет экспертов Иркутска</h3>
                         <p class="news-excerpt">Фестиваль постепенно становится больше, чем просто мероприятие...</p>
-                        <button class="news-btn" onclick="openNewsModal('news3')">Читать далее →</button>
+                        <button class="news-btn" data-news-id="news3">Читать далее →</button>
                     </div>
                 </article>
             </div>
         </div>
     </section>
 
-    <div class="modal" id="newsModal" role="dialog" aria-modal="true">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeNewsModal()" aria-label="Закрыть">✕</button>
-            <div class="modal-date" id="modalDate"></div>
-            <h3 class="modal-title" id="modalTitle"></h3>
-            <div class="modal-text" id="modalText"></div>
+    <!-- ===== МОДАЛЬНОЕ ОКНО НОВОСТИ ===== -->
+    <div class="modal-news" id="modalNews">
+        <div class="modal-news-content">
+            <button class="modal-news-close" id="modalNewsClose">✕</button>
+            <div class="modal-news-date" id="modalNewsDate"></div>
+            <div class="modal-news-title" id="modalNewsTitle"></div>
+            <div class="modal-news-text" id="modalNewsText"></div>
         </div>
     </div>
 
-    <!-- ============================================================
-        ЧЛЕНСТВО (детали)
-    ============================================================ -->
+    <!-- ===== ЧЛЕНСТВО ===== -->
     <section id="membership">
         <div class="arch-pattern-bg" style="opacity:0.35;" aria-hidden="true"></div>
         <div class="container">
             <div class="divider-line reveal">
-                <span class="ornament-mark">
-                    <svg viewBox="0 0 34 34" fill="none" stroke="var(--gold-bright)" stroke-width="1.4"><circle cx="17" cy="17" r="12"/><circle cx="17" cy="17" r="6"/></svg>
-                </span>
+                <span class="ornament-mark"><svg viewBox="0 0 34 34" fill="none" stroke="var(--gold-bright)" stroke-width="1.4"><circle cx="17" cy="17" r="12"/><circle cx="17" cy="17" r="6"/></svg></span>
                 <span class="divider-label">Членство</span>
-                <span class="ornament-mark">
-                    <svg viewBox="0 0 34 34" fill="none" stroke="var(--gold-bright)" stroke-width="1.4"><circle cx="17" cy="17" r="12"/><circle cx="17" cy="17" r="6"/></svg>
-                </span>
+                <span class="ornament-mark"><svg viewBox="0 0 34 34" fill="none" stroke="var(--gold-bright)" stroke-width="1.4"><circle cx="17" cy="17" r="12"/><circle cx="17" cy="17" r="6"/></svg></span>
             </div>
             <div class="section-header reveal">
                 <span class="section-tag">Вступайте в БАПИК</span>
                 <h2 class="section-title">Как стать участником</h2>
                 <p class="section-subtitle">Присоединяйтесь к сильному сообществу – защита, знания, контакты и репутация уже ждут вас.</p>
             </div>
-
             <div class="membership-grid">
                 <div class="membership-card reveal">
                     <h3><svg class="svg-icon" viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>Преимущества</h3>
@@ -1243,7 +1260,6 @@
                         <li><svg class="svg-icon" style="width:16px;height:16px;" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg><span>Нетворкинг и совместные коллаборации</span></li>
                     </ul>
                 </div>
-
                 <div class="membership-card reveal">
                     <h3><svg class="svg-icon" viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6z"/></svg>Обязанности</h3>
                     <ul class="membership-list">
@@ -1253,7 +1269,6 @@
                         <li><svg class="svg-icon" style="width:16px;height:16px;" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg><span>Содействие целям БАПИК</span></li>
                     </ul>
                 </div>
-
                 <div class="membership-card featured reveal">
                     <div class="membership-badge">5 шагов</div>
                     <h3><svg class="svg-icon" viewBox="0 0 24 24"><path d="M15 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm-9-2V7H4v3H1v2h3v3h2v-3h3v-2H6z"/></svg>Как вступить</h3>
@@ -1269,7 +1284,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="dues-box reveal">
                 <div class="dues-item">
                     <span class="dues-label">Ежегодный взнос</span>
@@ -1284,12 +1298,7 @@
         </div>
     </section>
 
-    <!-- ============================================================
-        УПРАВЛЕНИЕ, ДОКУМЕНТЫ, ВЗНОСЫ, FAQ, КОНТАКТЫ (без изменений)
-    ============================================================ -->
-    <!-- ... (остальные секции такие же, как в предыдущей версии, я сокращу для компактности, но в реальном файле они должны быть) ... -->
-
-    <!-- Для краткости я оставлю заглушку, но в финальном коде они полные -->
+    <!-- ===== УПРАВЛЕНИЕ ===== -->
     <section id="management">
         <div class="container">
             <div class="divider-line reveal">
@@ -1309,12 +1318,13 @@
                     <div class="structure-node"><div class="node-title">4. Ревизионная комиссия</div><div class="node-desc">Контроль за целевым расходованием средств.</div></div>
                 </div>
                 <div class="structure-img-frame reveal">
-                    <img src="images/structure.png" alt="Структура БАПИК" class="structure-img" loading="lazy" decoding="async" width="500" height="350" onerror="this.src='https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80'">
+                    <img src="images/structure.png" alt="Структура БАПИК" class="structure-img" loading="lazy" decoding="async" onerror="this.src='https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80'">
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- ===== ДОКУМЕНТЫ ===== -->
     <section id="docs">
         <div class="arch-pattern-bg" style="opacity:0.35;" aria-hidden="true"></div>
         <div class="container">
@@ -1343,13 +1353,13 @@
                 </div>
                 <div class="docs-download-list reveal">
                     <a href="docs/ustav.pdf" class="doc-item" download>
-                        <div class="doc-info"><svg class="svg-icon doc-icon" viewBox="0 0 24 24"><path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg><div><div class="doc-name">Устав БАПИК</div><div class="doc-ext">PDF документ</div></div></div>
+                        <div class="doc-info"><svg class="svg-icon doc-icon" viewBox="0 0 24 24"><path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg><div><div class="doc-name">Устав БАПИК</div><div class="doc-ext">PDF</div></div></div>
                     </a>
                     <a href="docs/svidetelstvo.pdf" class="doc-item" download>
-                        <div class="doc-info"><svg class="svg-icon doc-icon" viewBox="0 0 24 24"><path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg><div><div class="doc-name">Свидетельство о регистрации</div><div class="doc-ext">PDF документ</div></div></div>
+                        <div class="doc-info"><svg class="svg-icon doc-icon" viewBox="0 0 24 24"><path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg><div><div class="doc-name">Свидетельство о регистрации</div><div class="doc-ext">PDF</div></div></div>
                     </a>
                     <a href="docs/zayavlenie.pdf" class="doc-item" download>
-                        <div class="doc-info"><svg class="svg-icon doc-icon" viewBox="0 0 24 24"><path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg><div><div class="doc-name">Бланк заявления</div><div class="doc-ext">PDF документ</div></div></div>
+                        <div class="doc-info"><svg class="svg-icon doc-icon" viewBox="0 0 24 24"><path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg><div><div class="doc-name">Бланк заявления</div><div class="doc-ext">PDF</div></div></div>
                     </a>
                     <div class="transparency-box">
                         <h4>Прозрачность расходов</h4>
@@ -1360,6 +1370,7 @@
         </div>
     </section>
 
+    <!-- ===== ВЗНОСЫ ===== -->
     <section id="payment">
         <div class="container">
             <div class="payment-banner reveal">
@@ -1380,6 +1391,7 @@
         </div>
     </section>
 
+    <!-- ===== FAQ ===== -->
     <section id="faq">
         <div class="arch-pattern-bg" style="opacity:0.25;" aria-hidden="true"></div>
         <div class="container">
@@ -1409,6 +1421,7 @@
         </div>
     </section>
 
+    <!-- ===== КОНТАКТЫ ===== -->
     <section id="contacts">
         <div class="arch-pattern-bg" style="opacity:0.25;" aria-hidden="true"></div>
         <div class="container">
@@ -1449,9 +1462,7 @@
         </div>
     </section>
 
-    <!-- ============================================================
-        ФУТЕР
-    ============================================================ -->
+    <!-- ===== ФУТЕР ===== -->
     <div class="footer-gold-divider" aria-hidden="true">
         <svg viewBox="0 0 120 24" fill="none" stroke="var(--gold-bright)" stroke-width="1">
             <line x1="0" y1="12" x2="40" y2="12"/><circle cx="60" cy="12" r="8"/><circle cx="60" cy="12" r="3"/><line x1="80" y1="12" x2="120" y2="12"/>
@@ -1474,41 +1485,241 @@
         <svg class="svg-icon" viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
     </a>
 
+    <!-- ===== JAVASCRIPT ===== -->
     <script>
+        // ------------------------ ДАННЫЕ ЭКСПЕРТОВ ------------------------
+        const expertsData = [
+            {
+                id: 'expert1',
+                name: 'Пономарева Светлана Владимировна',
+                role: 'Председатель и создатель Байкальской ассоциации предприятий индустрии красоты',
+                photo: 'images/team-ponomareva.jpg',
+                desc: 'Организатор и идейный вдохновитель Иркутского городского фестиваля «Формула красоты». Член попечительского и наблюдательного совета по колледжам Иркутской области. Наставник мастеров в бьюти-индустрии.',
+                achievements: [
+                    'Парикмахер, стилист, эксперт с 30‑летним стажем',
+                    'Победитель российских и международных конкурсов и чемпионатов'
+                ]
+            },
+            {
+                id: 'expert2',
+                name: 'Кудинова Наталья Францевна',
+                role: 'Директор ГАПОУ «Иркутский колледж экономики, сервиса и туризма»',
+                photo: 'images/team-kudinova.jpg',
+                desc: 'Стаж работы в образовании — более 43 лет. Руководит колледжем с марта 2025 года.',
+                achievements: [
+                    'Почётный работник среднего профессионального образования РФ',
+                    'Заслуженный работник образования Иркутской области (2012)',
+                    'Директор года РФ – 2021 (Всероссийский конкурс)',
+                    'Знак «Отличник профессионально-технического образования РФ»',
+                    'Почётные грамоты Министерства образования Иркутской области (2016–2022)'
+                ]
+            },
+            {
+                id: 'expert3',
+                name: 'Князева Людмила Сергеевна',
+                role: 'Заместитель директора Иркутского колледжа экономики, сервиса и туризма',
+                photo: 'images/team-knyazeva.jpg',
+                desc: 'Соучредитель БАПИК с момента создания (8 июля 2014 года). Стаж работы – 28 лет.',
+                achievements: [
+                    'Образование: Иркутский государственный педагогический университет (учитель математики)',
+                    'Профпереподготовка «Менеджмент и экономика образования» (2018)',
+                    'Участвует в организации регионального этапа чемпионата «Профессионалы»',
+                    'Руководитель экзаменационной площадки Центра оценки квалификации «Союза парикмахеров и косметологов России»'
+                ]
+            },
+            {
+                id: 'expert4',
+                name: 'Токаренко (Макарова) Анна Александровна',
+                role: 'Учредитель Байкальской ассоциации предприятий индустрии красоты (2014)',
+                photo: 'images/team-tokarenko.jpg',
+                desc: 'Ранее – индивидуальный предприниматель в сфере парикмахерских услуг и салонов красоты.',
+                achievements: [
+                    'Соучредитель БАПИК (действует при ИКЭСТ)',
+                    'Была руководителем ООО «Солнечные Технологии» и ООО «Кемпинг-отель "Ёлочка"»'
+                ]
+            },
+            {
+                id: 'expert5',
+                name: 'Шишкин Сергей Николаевич',
+                role: 'Бывший директор ГАПОУ ИКЭСТ, соучредитель БАПИК',
+                photo: 'images/team-shishkin.jpg',
+                desc: 'Был директором Иркутского колледжа экономики, сервиса и туризма. Соучредитель БАПИК с 08.07.2014 по 15.12.2021.',
+                achievements: [
+                    'Индивидуальный предприниматель (с 17.04.2017) — оптовая торговля парфюмерными и косметическими товарами'
+                ]
+            },
+            {
+                id: 'expert6',
+                name: 'Карасева Оксана Николаевна',
+                role: 'Преподаватель ИКЭСТ, заместитель председателя БАПИК',
+                photo: 'images/team-karaseva.jpg',
+                desc: 'Преподаватель курсов по коммерческой деятельности и маркетингу сферы услуг, стаж 20 лет.',
+                achievements: [
+                    'Арт-директор и основатель компании «АВЕНЮ 11» — товары для ногтевого сервиса и парикмахерского искусства',
+                    'Официальный представитель торговой марки OLLIN Professional в Иркутске и Иркутской области'
+                ]
+            }
+        ];
+
+        // -------- КАРУСЕЛЬ --------
+        const track = document.getElementById('carouselTrack');
+        const dotsContainer = document.getElementById('carouselDots');
+        const prevBtn = document.getElementById('carouselPrev');
+        const nextBtn = document.getElementById('carouselNext');
+
+        let currentIndex = 0;
+        let slides = [];
+
+        function buildCarousel() {
+            // Создаём слайды
+            expertsData.forEach((expert, index) => {
+                const slide = document.createElement('div');
+                slide.className = 'carousel-slide';
+                slide.innerHTML = `
+                    <div class="team-card" data-expert-id="${expert.id}">
+                        <div class="team-photo-frame">
+                            <img src="${expert.photo}" alt="${expert.name}" class="team-photo" loading="lazy" onerror="this.src='https://via.placeholder.com/150/12312A/D9A62E?text=${encodeURIComponent(expert.name.split(' ')[0])}'">
+                        </div>
+                        <div class="team-name">${expert.name}</div>
+                        <div class="team-role">${expert.role}</div>
+                    </div>
+                `;
+                track.appendChild(slide);
+
+                // Клик по карточке открывает модалку
+                slide.querySelector('.team-card').addEventListener('click', () => {
+                    openExpertModal(expert.id);
+                });
+            });
+
+            slides = Array.from(track.children);
+
+            // Создаём точки
+            dotsContainer.innerHTML = '';
+            expertsData.forEach((_, index) => {
+                const dot = document.createElement('button');
+                dot.className = 'carousel-dot' + (index === 0 ? ' active' : '');
+                dot.dataset.index = index;
+                dot.addEventListener('click', () => goTo(index));
+                dotsContainer.appendChild(dot);
+            });
+
+            updateCarousel();
+        }
+
+        function updateCarousel() {
+            const slideWidth = slides[0]?.getBoundingClientRect().width || 0;
+            if (slideWidth === 0) return;
+            track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+
+            // Обновляем точки
+            document.querySelectorAll('.carousel-dot').forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentIndex);
+            });
+
+            // Прячем/показываем кнопки на мобилках (сделано через медиа-запрос в CSS)
+        }
+
+        function goTo(index) {
+            const total = slides.length;
+            if (index < 0) index = total - 1;
+            if (index >= total) index = 0;
+            currentIndex = index;
+            updateCarousel();
+        }
+
+        // Обработчики кнопок
+        prevBtn.addEventListener('click', () => goTo(currentIndex - 1));
+        nextBtn.addEventListener('click', () => goTo(currentIndex + 1));
+
+        // Обновление при ресайзе
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(updateCarousel, 100);
+        });
+
+        // Инициализация карусели
+        buildCarousel();
+
+        // -------- МОДАЛКА ЭКСПЕРТА --------
+        const modalExpert = document.getElementById('modalExpert');
+        const modalExpertClose = document.getElementById('modalExpertClose');
+        const modalExpertPhoto = document.getElementById('modalExpertPhoto');
+        const modalExpertName = document.getElementById('modalExpertName');
+        const modalExpertRole = document.getElementById('modalExpertRole');
+        const modalExpertDesc = document.getElementById('modalExpertDesc');
+        const modalExpertAchievements = document.getElementById('modalExpertAchievements');
+
+        function openExpertModal(id) {
+            const expert = expertsData.find(e => e.id === id);
+            if (!expert) return;
+            modalExpertPhoto.src = expert.photo;
+            modalExpertPhoto.alt = expert.name;
+            modalExpertPhoto.onerror = function() { this.src = 'https://via.placeholder.com/120/12312A/D9A62E?text=' + encodeURIComponent(expert.name.split(' ')[0]); };
+            modalExpertName.textContent = expert.name;
+            modalExpertRole.textContent = expert.role;
+            modalExpertDesc.textContent = expert.desc;
+            modalExpertAchievements.innerHTML = expert.achievements.map(a => `<li>${a}</li>`).join('');
+            modalExpert.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeExpertModal() {
+            modalExpert.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        modalExpertClose.addEventListener('click', closeExpertModal);
+        modalExpert.addEventListener('click', (e) => { if (e.target === modalExpert) closeExpertModal(); });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeExpertModal(); });
+
+        // -------- НОВОСТИ (модалка) --------
         const newsData = {
             news1: {
-                date: "24 августа 2026",
-                title: "В Иркутске состоялся первый нетворкинг участников фестиваля",
-                text: "24 августа состоялся нетворкинг экспертов и участников фестиваля «Формула красоты». В одном пространстве встретились специалисты из разных сфер, которые уже присоединились к фестивалю или рассматривают возможность участия. Участники познакомились друг с другом, представили свои проекты и узнали больше о концепции предстоящего фестиваля. Отдельной частью встречи стала подготовка экспертов к выступлениям на сцене: обсудили, как презентовать себя, работать с аудиторией и уверенно чувствовать себя во время публичного выступления. Но главное — встреча стала площадкой для новых знакомств и будущих коллабораций. Мы уверены, что фестиваль — это не только сцена и программа одного дня. Это возможность объединить людей, создать профессиональные связи и запустить новые совместные проекты. Впереди - ещё больше встреч, переговоров и подготовки к фестивалю."
+                date: '24 августа 2026',
+                title: 'В Иркутске состоялся первый нетворкинг участников фестиваля',
+                text: '24 августа состоялся нетворкинг экспертов и участников фестиваля «Формула красоты». В одном пространстве встретились специалисты из разных сфер, которые уже присоединились к фестивалю или рассматривают возможность участия. Участники познакомились друг с другом, представили свои проекты и узнали больше о концепции предстоящего фестиваля. Отдельной частью встречи стала подготовка экспертов к выступлениям на сцене: обсудили, как презентовать себя, работать с аудиторией и уверенно чувствовать себя во время публичного выступления. Но главное — встреча стала площадкой для новых знакомств и будущих коллабораций. Мы уверены, что фестиваль — это не только сцена и программа одного дня. Это возможность объединить людей, создать профессиональные связи и запустить новые совместные проекты. Впереди - ещё больше встреч, переговоров и подготовки к фестивалю.'
             },
             news2: {
-                date: "20 августа 2026",
-                title: "К фестивалю уже присоединились более 60 экспертов",
-                text: "Подготовка к «Формуле красоты» набирает обороты. Сегодня вокруг фестиваля уже формируется большое профессиональное сообщество - более 60 экспертов готовы присоединиться к проекту. Это специалисты из разных направлений, которых объединяет одна идея: говорить о красоте комплексно - через профессионализм, развитие, стиль, здоровье, уверенность в себе и качество жизни. Для нас важно не просто собрать большое количество участников. Мы создаём пространство, где эксперты могут быть полезны друг другу, находить партнёров, обмениваться опытом и знакомиться с новой аудиторией. Именно поэтому ещё до самого фестиваля мы проводим встречи и нетворкинги, где это сообщество начинает формироваться уже сейчас."
+                date: '20 августа 2026',
+                title: 'К фестивалю уже присоединились более 60 экспертов',
+                text: 'Подготовка к «Формуле красоты» набирает обороты. Сегодня вокруг фестиваля уже формируется большое профессиональное сообщество - более 60 экспертов готовы присоединиться к проекту. Это специалисты из разных направлений, которых объединяет одна идея: говорить о красоте комплексно - через профессионализм, развитие, стиль, здоровье, уверенность в себе и качество жизни. Для нас важно не просто собрать большое количество участников. Мы создаём пространство, где эксперты могут быть полезны друг другу, находить партнёров, обмениваться опытом и знакомиться с новой аудиторией. Именно поэтому ещё до самого фестиваля мы проводим встречи и нетворкинги, где это сообщество начинает формироваться уже сейчас.'
             },
             news3: {
-                date: "15 августа 2026",
-                title: "«Формула красоты» объединяет экспертов Иркутска",
-                text: "Фестиваль постепенно становится больше, чем просто мероприятие. Мы собираем в одном пространстве специалистов разных направлений, чтобы создать единую экосистему экспертов, где каждый может проявить себя и найти точки пересечения с другими участниками. На встречах специалисты знакомятся, презентуют свои проекты, обсуждают совместные идеи и находят возможности для коллабораций. Мы хотим, чтобы после фестиваля продолжались не только знакомства, но и реальные совместные проекты. Поэтому одна из ключевых задач «Формулы красоты» - объединять профессиональное сообщество Иркутска."
+                date: '15 августа 2026',
+                title: '«Формула красоты» объединяет экспертов Иркутска',
+                text: 'Фестиваль постепенно становится больше, чем просто мероприятие. Мы собираем в одном пространстве специалистов разных направлений, чтобы создать единую экосистему экспертов, где каждый может проявить себя и найти точки пересечения с другими участниками. На встречах специалисты знакомятся, презентуют свои проекты, обсуждают совместные идеи и находят возможности для коллабораций. Мы хотим, чтобы после фестиваля продолжались не только знакомства, но и реальные совместные проекты. Поэтому одна из ключевых задач «Формулы красоты» - объединять профессиональное сообщество Иркутска.'
             }
         };
 
-        function openNewsModal(newsId) {
-            const data = newsData[newsId];
-            if (!data) return;
-            document.getElementById('modalDate').innerText = data.date;
-            document.getElementById('modalTitle').innerText = data.title;
-            document.getElementById('modalText').innerText = data.text;
-            document.getElementById('newsModal').classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-        function closeNewsModal() {
-            document.getElementById('newsModal').classList.remove('active');
-            document.body.style.overflow = '';
-        }
-        window.addEventListener('click', e => { if (e.target.id === 'newsModal') closeNewsModal(); });
-        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeNewsModal(); });
+        const modalNews = document.getElementById('modalNews');
+        const modalNewsClose = document.getElementById('modalNewsClose');
+        const modalNewsDate = document.getElementById('modalNewsDate');
+        const modalNewsTitle = document.getElementById('modalNewsTitle');
+        const modalNewsText = document.getElementById('modalNewsText');
 
+        document.querySelectorAll('.news-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const id = btn.dataset.newsId;
+                const data = newsData[id];
+                if (!data) return;
+                modalNewsDate.textContent = data.date;
+                modalNewsTitle.textContent = data.title;
+                modalNewsText.textContent = data.text;
+                modalNews.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        modalNewsClose.addEventListener('click', () => {
+            modalNews.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+        modalNews.addEventListener('click', (e) => { if (e.target === modalNews) { modalNews.classList.remove('active'); document.body.style.overflow = ''; } });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { modalNews.classList.remove('active'); document.body.style.overflow = ''; } });
+
+        // -------- ОБЩИЕ ФУНКЦИИ --------
         function copyText(text) {
             if (navigator.clipboard) {
                 navigator.clipboard.writeText(text).then(() => alert('Скопировано: ' + text));
@@ -1516,13 +1727,36 @@
         }
 
         function animateCounters() {
-            // не используется, оставлено для совместимости
+            const counters = document.querySelectorAll('.counter');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = +entry.target.getAttribute('data-target');
+                        let count = 0;
+                        const step = Math.ceil(target / 30);
+                        const timer = setInterval(() => {
+                            count += step;
+                            if (count >= target) {
+                                entry.target.innerText = target;
+                                clearInterval(timer);
+                            } else {
+                                entry.target.innerText = count;
+                            }
+                        }, 40);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            counters.forEach(c => observer.observe(c));
         }
 
         document.addEventListener('DOMContentLoaded', () => {
             const preloader = document.getElementById('preloader');
             if (preloader) requestAnimationFrame(() => preloader.classList.add('loaded'));
 
+            animateCounters();
+
+            // Бургер-меню
             const burgerBtn = document.getElementById('burger-btn');
             const navMenu = document.getElementById('nav-menu');
             if (burgerBtn && navMenu) {
@@ -1530,10 +1764,12 @@
                 document.querySelectorAll('.nav-link').forEach(l => l.addEventListener('click', () => navMenu.classList.remove('active')));
             }
 
+            // FAQ аккордеон
             document.querySelectorAll('.faq-question').forEach(btn => {
                 btn.addEventListener('click', () => btn.parentElement.classList.toggle('active'));
             });
 
+            // Reveal анимация
             const revealObserver = new IntersectionObserver(entries => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) { entry.target.classList.add('active'); revealObserver.unobserve(entry.target); }
@@ -1541,6 +1777,7 @@
             }, { rootMargin: '0px 0px -40px 0px', threshold: 0.1 });
             document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
+            // Header scroll
             const header = document.getElementById('header');
             const backToTop = document.getElementById('backToTop');
             window.addEventListener('scroll', () => {
